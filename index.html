@@ -12,7 +12,7 @@
     <nav class="nav">
       <a href="./">Top</a>
       <a href="./about/">About</a>
-      <a href="./works/">Output</a>
+      <a href="./works/">Works</a>
       <a href="./study/">Study</a>
       <a href="./hobby/">Hobby</a>
       <a href="./support/">Support</a>
@@ -21,65 +21,133 @@
   </header>
 
   <main>
+    <!-- Hero：入口 -->
     <section class="hero">
       <div class="hero-text">
-        <h1>TAKUMI</h1>
-        <p>学び・仕事・生活をひとつの流れとして記録する個人サイト。</p>
+        <p class="hero-label">PORTFOLIO</p>
+        <h1>Takumi</h1>
+        <p class="hero-lead">
+          学び、小さな制作、日常、そしてさりげない応援をまとめた個人サイト。
+          このトップページは、その入り口として全体の雰囲気だけ置いています。
+        </p>
+      </div>
+      <div class="hero-vis">
+        <div class="hero-block"></div>
       </div>
     </section>
 
-    <section class="section about">
-      <h2>About</h2>
-      <p>沖縄を拠点に、資格教育・飲食・地域事業を横断して活動しています。</p>
-      <p class="more-link"><a href="./about/">→ Aboutページを見る</a></p>
+    <!-- About preview -->
+    <section class="section" id="about-preview">
+      <div class="section-header">
+        <h2>About</h2>
+        <span class="section-sub">私について</span>
+      </div>
+      <p>
+        普段の仕事の横で、資格の勉強やWeb制作の練習、身近な人のための小さな仕組みづくりを続けています。
+        詳しい自己紹介や考えていることは、専用ページにまとめています。
+      </p>
+      <p class="more-link">
+        <a href="./about/">→ Aboutページを見る</a>
+      </p>
     </section>
 
-    <section class="section works alt">
-      <h2>Output</h2>
+    <!-- Works preview：カード型で紹介していく予定 -->
+    <section class="section alt" id="works-preview">
+      <div class="section-header">
+        <h2>Works</h2>
+        <span class="section-sub">つくったもの・関わったもの</span>
+      </div>
+      <p>
+        ここでは、個人の範囲で作ったページやツール、コンテンツなどをカード形式で紹介していく予定です。
+        詳細やリンクは Works ページ側で整理していきます。
+      </p>
+
       <div class="works-grid">
         <article class="work-item">
-          <div class="work-thumb" style="background-image:url('./assets/img/sample1.jpg');"></div>
+          <div class="work-thumb thumb-1"></div>
           <div class="work-content">
-            <h3>沖縄アウトプットアカデミー</h3>
-            <p>資格取得支援を中心としたe-Learningサービス。</p>
+            <h3>学習用ミニサイト</h3>
+            <p>資格の要点と簡単なクイズをまとめた静的サイト。（Worksで詳細予定）</p>
           </div>
         </article>
         <article class="work-item">
-          <div class="work-thumb" style="background-image:url('./assets/img/sample2.jpg');"></div>
+          <div class="work-thumb thumb-2"></div>
           <div class="work-content">
-            <h3>かふーぷらんつ</h3>
-            <p>植物と鉢のある生活を提案する小規模ブランド。</p>
+            <h3>紹介用LPデザイン</h3>
+            <p>応援したいお店やプロジェクトをシンプルに紹介する1ページ構成。</p>
           </div>
         </article>
       </div>
-      <p class="more-link"><a href="./works/">→ Outputページを見る</a></p>
+
+      <p class="more-link">
+        <a href="./works/">→ Worksページで詳しく見る</a>
+      </p>
     </section>
 
-    <section class="section study">
-      <h2>Study</h2>
-      <p>中小企業診断士、簿記1級、ITストラテジストなどの学習記録。</p>
-      <p class="more-link"><a href="./study/">→ Studyページを見る</a></p>
+    <!-- Study preview -->
+    <section class="section" id="study-preview">
+      <div class="section-header">
+        <h2>Study</h2>
+        <span class="section-sub">学びの記録</span>
+      </div>
+      <p>
+        解説記事や確認クイズを含むコンテンツを、資格ごと・テーマごとに整理していく予定です。
+        規模が大きくなる前提なので、専用ページで構造的にまとめます。
+      </p>
+      <p class="more-link">
+        <a href="./study/">→ Studyページを見る</a>
+      </p>
     </section>
 
-    <section class="section hobby alt">
-      <h2>Hobby</h2>
-      <p>スポーツ観戦・植物・料理・写真。日常の記録として更新。</p>
-      <p class="more-link"><a href="./hobby/">→ Hobbyページを見る</a></p>
+    <!-- Hobby preview -->
+    <section class="section alt" id="hobby-preview">
+      <div class="section-header">
+        <h2>Hobby</h2>
+        <span class="section-sub">好きなこと</span>
+      </div>
+      <p>
+        植物、料理、スポーツ観戦、ローカルなお店巡りなど。
+        日常の断片や写真は Hobby ページ側でゆるく置いていきます。
+      </p>
+      <p class="more-link">
+        <a href="./hobby/">→ Hobbyページを見る</a>
+      </p>
     </section>
 
-    <section class="section support">
-      <h2>Support</h2>
-      <p>地元・仲間・好きな店を応援するプロジェクト紹介。</p>
-      <p class="more-link"><a href="./support/">→ Supportページを見る</a></p>
+    <!-- Support preview -->
+    <section class="section" id="support-preview">
+      <div class="section-header">
+        <h2>Support</h2>
+        <span class="section-sub">応援している場所</span>
+      </div>
+      <p>
+        好きなお店や活動を紹介するエリア。
+        各店舗・プロジェクト用の個別ページ（LP）を別途作成し、
+        このサイトからは概要とリンク、好きなメニューやSNSだけを載せる想定です。
+      </p>
+      <p class="more-link">
+        <a href="./support/">→ Supportページを見る</a>
+      </p>
     </section>
 
-    <section class="section contact alt">
-      <h2>Contact</h2>
-      <p>仕事・コラボ・相談など、気軽にお問い合わせください。</p>
-      <p class="more-link"><a href="./contact/">→ Contactページを見る</a></p>
+    <!-- Contact preview -->
+    <section class="section alt" id="contact-preview">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <span class="section-sub">ゆるい窓口</span>
+      </div>
+      <p>
+        何か一緒にできそうなことがあれば、ここから。
+        連絡先や簡易フォームは Contact ページにまとめていきます。
+      </p>
+      <p class="more-link">
+        <a href="./contact/">→ Contactページを見る</a>
+      </p>
     </section>
   </main>
 
-  <footer>&copy; 2025 TAKUMI</footer>
+  <footer class="footer">
+    &copy; 2025 Takumi
+  </footer>
 </body>
 </html>

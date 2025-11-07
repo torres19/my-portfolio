@@ -1,9 +1,11 @@
+/* ========= Base ========= */
 :root {
-  --bg: #f9f9f9;
-  --accent1: #bfc5c5;
-  --accent2: #48443b;
-  --accent3: #536669;
-  --accent4: #726962;
+  --bg: #f3f3f3;
+  --white: #ffffff;
+  --accent1: #bfc5c5; /* soft gray-green */
+  --accent2: #48443b; /* deep warm gray */
+  --accent3: #536669; /* bluish gray */
+  --accent4: #726962; /* warm mid gray */
 }
 
 * {
@@ -13,93 +15,158 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif;
   background: var(--bg);
   color: var(--accent2);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
 }
 
-/* ----- Header ----- */
-header {
+/* ========= Header ========= */
+
+.header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 8px 4px 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--accent3);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  font-size: 0.95rem;
+  color: var(--accent2);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.8rem;
 }
 
 .nav a {
-  margin-left: 20px;
   text-decoration: none;
   color: var(--accent4);
-  font-size: 0.9rem;
+  padding-bottom: 2px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent3);
+  transition: width 0.25s ease;
 }
 
 .nav a:hover {
   color: var(--accent3);
 }
 
-/* ----- Hero ----- */
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ========= Hero ========= */
+
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  text-align: center;
-  background: #fff;
-  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(180px, 2fr);
+  gap: 28px;
+  padding: 28px 26px 24px;
+  margin-bottom: 28px;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+}
+
+.hero-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--accent4);
+  margin-bottom: 4px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: var(--accent2);
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: var(--accent4);
-}
-
-/* ----- Sections ----- */
-.section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: #fff;
-}
-
-.section.alt {
-  background: #f2f2f2;
-}
-
-.section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: var(--accent2);
-  border-left: 4px solid var(--accent3);
-  padding-left: 10px;
-}
-
-.section p {
-  color: var(--accent4);
   margin-bottom: 10px;
 }
 
+.hero-lead {
+  font-size: 0.92rem;
+  color: var(--accent4);
+}
+
+.hero-vis {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero-block {
+  width: 100%;
+  max-width: 260px;
+  height: 160px;
+  border-radius: 14px;
+  background: linear-gradient(
+    to bottom right,
+    var(--accent1),
+    var(--accent3)
+  );
+  opacity: 0.9;
+}
+
+/* ========= Sections (previews) ========= */
+
+.section {
+  padding: 22px 24px 20px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+.section.alt {
+  background: #f7f7f7;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 1.4rem;
+  color: var(--accent2);
+}
+
+.section-sub {
+  font-size: 0.75rem;
+  color: var(--accent4);
+}
+
+.section p {
+  font-size: 0.9rem;
+  color: var(--accent4);
+}
+
+/* ========= "More" Links ========= */
+
 .more-link {
-  margin-top: 12px;
-  font-size: 0.85rem;
+  margin-top: 8px;
+  font-size: 0.8rem;
 }
 
 .more-link a {
@@ -108,64 +175,112 @@ header {
 }
 
 .more-link a:hover {
+  color: var(--accent2);
   text-decoration: underline;
 }
 
-/* ----- Works ----- */
+/* ========= Works Preview Grid ========= */
+
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+  margin-top: 14px;
 }
 
 .work-item {
   display: flex;
+  gap: 14px;
   align-items: flex-start;
-  gap: 20px;
 }
 
 .work-thumb {
-  width: 50%;
+  flex: 0 0 40%;
   aspect-ratio: 16 / 9;
-  background: #ddd center/cover no-repeat;
-  border-radius: 8px;
+  border-radius: 10px;
+  background: #dcdede center/cover no-repeat;
 }
 
-.work-content {
-  flex: 1;
+/* 仮のグラデ。実際は画像に差し替えてOK */
+.thumb-1 {
+  background: linear-gradient(to bottom right, var(--accent1), var(--accent3));
+}
+.thumb-2 {
+  background: linear-gradient(to bottom right, #e3e0da, var(--accent4));
 }
 
 .work-content h3 {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   color: var(--accent2);
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .work-content p {
-  font-size: 0.9rem;
-  color: var(--accent4);
-}
-
-/* ----- Footer ----- */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  background: #fff;
-  border-top: 1px solid #eee;
   font-size: 0.8rem;
   color: var(--accent4);
 }
 
-/* ----- Responsive ----- */
-@media (max-width: 768px) {
+/* ========= Footer ========= */
+
+.footer {
+  margin-top: 26px;
+  padding-top: 10px;
+  font-size: 0.75rem;
+  color: #9a9a9a;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ========= Responsive ========= */
+
+@media (max-width: 900px) {
+  body {
+    padding: 18px 14px 28px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 22px 18px 18px;
+  }
+
+  .hero-vis {
+    justify-content: flex-start;
+  }
+
+  .hero-block {
+    max-width: 220px;
+    height: 130px;
+  }
+
+  .section {
+    padding: 18px 16px 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
   .work-item {
     flex-direction: column;
   }
+
   .work-thumb {
     width: 100%;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
   }
 }
