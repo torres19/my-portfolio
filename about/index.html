@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>About | Takumi Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 <header>
-  <div class="site-title">Takumi Portfolio</div>
+  <div class="logo">TAKUMI</div>
   <nav>
-    <a href="../">Home</a>
-    <a href="../works/">Works</a>
+    <a href="../">Top</a>
+    <a href="../about/">About</a>
+    <a href="../works/">Output</a>
     <a href="../study/">Study</a>
     <a href="../hobby/">Hobby</a>
     <a href="../support/">Support</a>
@@ -19,33 +21,36 @@
 </header>
 
 <main>
-  <section>
-    <h1>About</h1>
-    <p>
-      学ぶこと・仕組みを作ること・身近な人の役に立つことが好きな人間です。
-      このサイトでは、これまでの勉強・小さな制作物・興味のある分野を、
-      自分用のメモも兼ねて整理しています。
-    </p>
-    <p>
-      詳細なプロフィールや肩書きはあえて詰め込みすぎず、
-      「この人こういうこと考えてるんだな」と伝わるくらいの温度感で更新していきます。
-    </p>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-label">ABOUT</p>
+      <h1>About me</h1>
+      <p class="hero-lead">
+        仕事の外側で続けている学びや制作を、静かに積み上げていく人。
+        このページでは、少し踏み込んだ自己紹介を書いていきます。
+      </p>
+    </div>
+    <div class="hero-image">
+      <div class="hero-photo"></div>
+    </div>
   </section>
 
-  <section>
-    <h2>ざっくりとした関心領域</h2>
-    <ul>
-      <li>資格学習・教育コンテンツ作り</li>
-      <li>小さな仕組み・Webツールで生活や仕事を楽にすること</li>
-      <li>地域に根ざしたお店・活動をそっと応援すること</li>
-    </ul>
+  <section class="section">
+    <div class="section-header">
+      <h2>Profile</h2>
+    </div>
+    <p>ここに略歴や価値観を書いていく。（今はダミーでOK）</p>
+  </section>
+
+  <section class="section alt">
+    <div class="section-header">
+      <h2>Values</h2>
+    </div>
+    <p>大事にしていること、仕事・学び・生活で意識していることなど。</p>
   </section>
 </main>
 
-<footer>
-  &copy; Takumi
-</footer>
-
+<footer>&copy; Takumi</footer>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

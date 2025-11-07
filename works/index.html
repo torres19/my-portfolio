@@ -2,15 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Works | Takumi Portfolio</title>
+  <title>Output | Takumi Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 <header>
-  <div class="site-title">Takumi Portfolio</div>
+  <div class="logo">TAKUMI</div>
   <nav>
-    <a href="../">Home</a>
+    <a href="../">Top</a>
     <a href="../about/">About</a>
+    <a href="../works/">Output</a>
     <a href="../study/">Study</a>
     <a href="../hobby/">Hobby</a>
     <a href="../support/">Support</a>
@@ -19,34 +21,36 @@
 </header>
 
 <main>
-  <section>
-    <h1>Works</h1>
-    <p>
-      個人で作成した小さなサイトやツール、コンテンツなどをまとめていくスペースです。
-      現時点ではサンプルのみですが、実際の成果物が増え次第差し替えていきます。
-    </p>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-label">OUTPUT</p>
+      <h1>Output / Works</h1>
+      <p class="hero-lead">
+        個人の範囲で作っているものの一覧。
+        「これくらいのことなら一人で組めます」というサンプル集です。
+      </p>
+    </div>
+    <div class="hero-image">
+      <div class="hero-photo"></div>
+    </div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-
-    <div class="card">
-      <h3>学習用クイズページ（Sample）</h3>
-      <p>資格学習向けに、ブラウザだけで動くシンプルなクイズページを制作中。</p>
-      <p><span class="note">※ 公開用URLやGitHubリポジトリは随時追加。</span></p>
+  <section class="section">
+    <div class="section-header">
+      <h2>Static Sites</h2>
     </div>
+    <p>ポートフォリオ・LP・紹介ページなど、HTML/CSS/JSのみで完結するサイト。</p>
+  </section>
 
-    <div class="card">
-      <h3>ポートフォリオサイト</h3>
-      <p>このサイト自体も、「静的サイトでどこまでできるか」の実験を兼ねたプロジェクトです。</p>
+  <section class="section alt">
+    <div class="section-header">
+      <h2>Learning Contents</h2>
     </div>
+    <p>資格テキスト要約、確認クイズ、用語集など。</p>
   </section>
 </main>
 
-<footer>
-  &copy; Takumi
-</footer>
-
+<footer>&copy; Takumi</footer>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

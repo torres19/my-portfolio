@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Study | Takumi Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 <header>
-  <div class="site-title">Takumi Portfolio</div>
+  <div class="logo">TAKUMI</div>
   <nav>
-    <a href="../">Home</a>
+    <a href="../">Top</a>
     <a href="../about/">About</a>
-    <a href="../works/">Works</a>
+    <a href="../works/">Output</a>
+    <a href="../study/">Study</a>
     <a href="../hobby/">Hobby</a>
     <a href="../support/">Support</a>
     <a href="../contact/">Contact</a>
@@ -19,31 +21,34 @@
 </header>
 
 <main>
-  <section>
-    <h1>Study</h1>
-    <p>
-      勉強してきたこと・していることを整理する場所です。
-      将来的には資格ごとにテキストと10問クイズを用意して、
-      自分も他の人もサッと復習できる形にしていきます。
-    </p>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-label">STUDY</p>
+      <h1>Study Log</h1>
+      <p class="hero-lead">
+        勉強した内容を、テキストとクイズで残していく場所。
+        自分用だけど、誰かの役に立つならそれも嬉しいくらいのスタンス。
+      </p>
+    </div>
+    <div class="hero-image">
+      <div class="hero-photo"></div>
+    </div>
   </section>
 
-  <section>
-    <h2>予定しているコンテンツ</h2>
-    <ul>
-      <li>簿記：基礎整理＋小テスト</li>
-      <li>FP / マネー系：重要ポイントまとめ</li>
-      <li>IT・セキュリティ：用語暗記用クイズ</li>
-      <li>その他、学びながら随時追加</li>
+  <section class="section">
+    <div class="section-header">
+      <h2>資格メモ & クイズ</h2>
+    </div>
+    <ul class="bullet-list">
+      <li>簿記：基礎まとめ & ミニテスト</li>
+      <li>FP：重要ワード整理</li>
+      <li>IT系：セキュリティ / ネットワークの基礎</li>
     </ul>
-    <p class="note">※ 今は構成だけ用意してあります。</p>
+    <p class="note">※ あとで各コンテンツ用HTMLをこのページからリンクしていく。</p>
   </section>
 </main>
 
-<footer>
-  &copy; Takumi
-</footer>
-
+<footer>&copy; Takumi</footer>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
