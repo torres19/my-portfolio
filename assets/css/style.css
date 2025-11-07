@@ -19,7 +19,7 @@ body {
   line-height: 1.8;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 32px 20px 40px;
 }
 
 /* ===============================
@@ -32,7 +32,6 @@ body {
   --accent2: #48443b;
   --accent3: #536669;
   --accent4: #726962;
-  --shadow: rgba(0, 0, 0, 0.08);
 }
 
 /* ===============================
@@ -41,35 +40,33 @@ body {
 h1, h2, h3 {
   font-weight: 600;
   color: var(--accent2);
-  margin-bottom: 0.4em;
   letter-spacing: 0.02em;
 }
 
 h1 {
-  font-size: 2rem;
-  border-left: 6px solid var(--accent3);
-  padding-left: 10px;
-  margin-top: 1em;
+  font-size: 2.2rem;
+  margin-bottom: 0.4em;
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin-top: 1.2em;
+  font-size: 1.5rem;
+  margin-bottom: 0.4em;
 }
 
 h3 {
   font-size: 1.1rem;
+  margin-bottom: 0.3em;
   color: var(--accent4);
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 0.9em;
   color: var(--text);
 }
 
 ul {
   margin-left: 1.2em;
-  margin-bottom: 1em;
+  margin-bottom: 0.9em;
 }
 
 /* ===============================
@@ -93,25 +90,24 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
   gap: 10px;
-  padding-bottom: 12px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid var(--accent1);
+  margin-bottom: 24px;
 }
 
 .site-title {
   font-weight: 700;
   font-size: 1.6rem;
   color: var(--accent2);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 nav a {
   font-size: 0.9rem;
   color: var(--accent4);
-  margin-left: 16px;
+  margin-left: 14px;
   position: relative;
+  padding-bottom: 2px;
 }
 
 nav a:first-child {
@@ -123,10 +119,10 @@ nav a::after {
   position: absolute;
   width: 0%;
   height: 2px;
-  bottom: -3px;
+  bottom: 0;
   left: 0;
   background-color: var(--accent3);
-  transition: width 0.3s ease;
+  transition: width 0.25s ease;
 }
 
 nav a:hover::after {
@@ -134,77 +130,45 @@ nav a:hover::after {
 }
 
 /* ===============================
-   Sections
+   Hero (トップ一番上)
 ================================== */
-section {
-  background: #fff;
-  border-radius: 14px;
-  padding: 24px 28px;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 12px var(--shadow);
+.hero {
+  padding: 28px 0 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-section h2:first-child,
-section h1:first-child {
-  margin-top: 0;
-}
-
-/* ===============================
-   Cards
-================================== */
-.card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 10px var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px var(--shadow);
-}
-
-/* ===============================
-   Tabs (Support page)
-================================== */
-.tabs {
-  display: inline-flex;
-  border-radius: 999px;
-  padding: 4px;
-  background: var(--accent1);
-  margin: 12px 0 16px;
-}
-
-.tab-btn {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 0.85rem;
-  padding: 6px 14px;
-  border-radius: 999px;
+.hero-lead {
   color: var(--accent4);
-  transition: all 0.2s ease;
-}
-
-.tab-btn.active {
-  background: var(--accent3);
-  color: #fff;
-}
-
-.menu-lang {
-  display: none;
-  margin-top: 8px;
   font-size: 0.95rem;
 }
 
-.menu-lang.active {
-  display: block;
+.hero-sub {
+  color: var(--accent3);
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   Sections (LPスタイル)
+   - section-block: 通常の帯
+   - section-alt: うっすら背景色で区切り
+================================== */
+.section-block {
+  padding: 32px 0 28px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.section-alt {
+  padding: 32px 18px 28px;
+  margin: 24px -18px 0;
+  background: #f1f3f3;
+  border-top: 1px solid rgba(0,0,0,0.03);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+/* 小さめテキスト */
+.note {
+  font-size: 0.8rem;
+  color: #888;
 }
 
 /* ===============================
@@ -216,5 +180,5 @@ footer {
   color: #888;
   margin-top: 40px;
   padding-top: 16px;
-  border-top: 1px solid var(--accent1);
+  border-top: 1px solid rgba(0,0,0,0.06);
 }

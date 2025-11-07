@@ -1,4 +1,4 @@
-// Smooth scroll for internal hash links
+// ページ内リンクをスムーススクロールに
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
@@ -7,14 +7,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (!target) return;
 
     e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.pageYOffset - 60;
     window.scrollTo({
-      top: target.offsetTop - 40,
+      top,
       behavior: 'smooth'
     });
   });
 });
 
-// Language tabs (Support page)
+// Supportページなどの言語タブ
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.tab-btn');
   if (!btn) return;

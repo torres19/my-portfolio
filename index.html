@@ -9,48 +9,138 @@
 <header>
   <div class="site-title">Takumi Portfolio</div>
   <nav>
-    <a href="./">Home</a>
-    <a href="./about/">About</a>
-    <a href="./works/">Works</a>
-    <a href="./study/">Study</a>
-    <a href="./hobby/">Hobby</a>
-    <a href="./support/">Support</a>
-    <a href="./contact/">Contact</a>
+    <a href="#top">Top</a>
+    <a href="#about">About</a>
+    <a href="#works">Works</a>
+    <a href="#study">Study</a>
+    <a href="#hobby">Hobby</a>
+    <a href="#support">Support</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main>
-  <section>
-    <h1>ようこそ。</h1>
-    <p>
-      学び、つくったもの、好きなもの、そして応援している場所をまとめたシンプルなポートフォリオサイトです。
-      まだ整備中ですが、少しずつ更新していきます。
+<main id="top">
+  <section class="hero">
+    <h1>学びと、小さな実験のポートフォリオ。</h1>
+    <p class="hero-lead">
+      資格の勉強、ちょっとしたWeb制作、ローカルなお店へのささやかな応援。
+    </p>
+    <p class="hero-sub">
+      大げさな肩書きより、「何を積み上げているか」が見える場所として、この1ページを育てていきます。
     </p>
   </section>
 
-  <section>
+  <section id="about" class="section-block">
     <h2>About</h2>
-    <p>簡単な自己紹介と考え方を載せています。詳しくは <a href="./about/">Aboutページ</a> へ。</p>
+    <p>
+      日々の仕事の合間に、資格の勉強やWebまわりの小さな制作を続けています。
+      ここでは、名前や肩書きを強く打ち出しすぎず、ほどよい距離感で「こういう人」です、を置いておきます。
+    </p>
+    <p>
+      好きなものは、整った情報、ちょっとした仕組み化、ローカルな居酒屋、静かな時間。
+    </p>
   </section>
 
-  <section>
+  <section id="works" class="section-alt">
     <h2>Works</h2>
-    <p>学習サイトや小さなツール、コンテンツなどの実績をまとめます。<a href="./works/">Worksページ</a>。</p>
+    <p>
+      個人として試していることや、小さく形にしたものの記録です。
+      本格的な案件紹介というより、「こういうアウトプットができます」のサンプル置き場。
+    </p>
+    <ul>
+      <li>資格学習用のクイズページ（ブラウザだけで動くシンプルな仕組み）</li>
+      <li>このポートフォリオサイト（静的サイト構成の実験）</li>
+      <li>身近な人向けの、勉強サポート用コンテンツなど（順次追加予定）</li>
+    </ul>
+    <p class="note">※ 詳細が増えてきたら別ページに分ける予定。</p>
   </section>
 
-  <section>
+  <section id="study" class="section-block">
     <h2>Study</h2>
-    <p>取り組んでいる資格や学習メモ、確認用クイズなどを <a href="./study/">Studyページ</a> に整理していきます。</p>
+    <p>
+      勉強している内容や、復習用のテキスト・クイズをまとめていくエリアです。
+      自分用の整理でありつつ、誰かの役にも立てばいいな、くらいの温度感で。
+    </p>
+    <ul>
+      <li>簿記：重要ポイント＋10問クイズ</li>
+      <li>FP / マネーリテラシー：用語整理</li>
+      <li>IT・情報セキュリティ：頻出キーワード確認</li>
+    </ul>
+    <p class="note">※ ここから各資格ごとのページに飛ばす構成も後で作れる。</p>
   </section>
 
-  <section>
+  <section id="hobby" class="section-alt">
     <h2>Hobby</h2>
-    <p>日常の楽しみごと（植物・料理・スポーツ観戦など）を少しだけ。<a href="./hobby/">Hobbyページ</a>。</p>
+    <p>
+      仕事や勉強以外のところで、楽しくやっていること。
+      深堀りしすぎず、雰囲気だけ伝わるくらいのメモ。
+    </p>
+    <ul>
+      <li>植物を育てたり眺めたり。</li>
+      <li>気分で作るごはんの実験。</li>
+      <li>スポーツや格闘技を見る時間。</li>
+      <li>ローカルなお店を探してふらっと飲むこと。</li>
+    </ul>
   </section>
 
-  <section>
+  <section id="support" class="section-block">
     <h2>Support</h2>
-    <p>個人的に応援しているお店やプロジェクトを紹介しています。<a href="./support/">Supportページ</a>。</p>
+    <p>
+      個人的に応援しているお店や場所を紹介するスペース。
+      「スポンサー」「提携」みたいな大げさなニュアンスではなく、
+      ただ好きで推している雰囲気で載せています。
+    </p>
+
+    <div data-tab-wrapper>
+      <h3>居酒屋 Kafu Terrace</h3>
+      <p>地元食材と、落ち着いた空気が心地いい小さな居酒屋。</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-lang="ja">日本語</button>
+        <button class="tab-btn" data-lang="en">English</button>
+        <button class="tab-btn" data-lang="zh">中文</button>
+      </div>
+
+      <div class="menu-lang active" data-lang="ja">
+        <p>おすすめ：</p>
+        <ul>
+          <li>島豆腐と海ぶどうのサラダ</li>
+          <li>ラフテーとソーキ盛り合わせ</li>
+          <li>グルクン唐揚げ</li>
+        </ul>
+      </div>
+
+      <div class="menu-lang" data-lang="en">
+        <p>Recommended:</p>
+        <ul>
+          <li>Sea Grapes & Island Tofu Salad</li>
+          <li>Okinawan Braised Pork Sampler</li>
+          <li>Deep-fried Gurukun Fish</li>
+        </ul>
+      </div>
+
+      <div class="menu-lang" data-lang="zh">
+        <p>推荐菜：</p>
+        <ul>
+          <li>海葡萄岛豆腐沙拉</li>
+          <li>冲绳红烧肉拼盘</li>
+          <li>炸Gurukun鱼</li>
+        </ul>
+      </div>
+
+      <p class="note">※ 表現やメニューはイメージ。実際のお店に合わせて調整可。</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section-alt">
+    <h2>Contact</h2>
+    <p>
+      「何か一緒にやれそう」「こういうコンテンツ欲しい」などあれば、気軽にどうぞ。
+      まだテスト段階なので、連絡先もあとで正式なものに変えます。
+    </p>
+    <ul>
+      <li>Mail: <a href="mailto:example@example.com">example@example.com</a></li>
+    </ul>
   </section>
 </main>
 
