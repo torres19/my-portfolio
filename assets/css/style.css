@@ -24,10 +24,6 @@ body {
 
 /* ===============================
    Color Palette
-   #bfc5c5 (mist gray)
-   #48443b (dark olive)
-   #536669 (steel gray)
-   #726962 (warm gray)
 ================================== */
 :root {
   --bg: #f8f8f8;
@@ -69,6 +65,11 @@ h3 {
 p {
   margin-bottom: 1em;
   color: var(--text);
+}
+
+ul {
+  margin-left: 1.2em;
+  margin-bottom: 1em;
 }
 
 /* ===============================
@@ -113,6 +114,10 @@ nav a {
   position: relative;
 }
 
+nav a:first-child {
+  margin-left: 0;
+}
+
 nav a::after {
   content: "";
   position: absolute;
@@ -139,43 +144,49 @@ section {
   box-shadow: 0 4px 12px var(--shadow);
 }
 
-section h2:first-child {
+section h2:first-child,
+section h1:first-child {
   margin-top: 0;
 }
 
 /* ===============================
-   Card (for Works / Support)
+   Cards
 ================================== */
 .card {
   background: #fff;
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
   box-shadow: 0 4px 10px var(--shadow);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h3 {
+  margin-top: 0;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px var(--shadow);
 }
 
 /* ===============================
-   Tabs (for Support multi-lang)
+   Tabs (Support page)
 ================================== */
 .tabs {
   display: inline-flex;
   border-radius: 999px;
   padding: 4px;
   background: var(--accent1);
-  margin: 12px 0 20px;
+  margin: 12px 0 16px;
 }
 
 .tab-btn {
   border: none;
   background: transparent;
   cursor: pointer;
-  font-size: 0.9rem;
-  padding: 6px 16px;
+  font-size: 0.85rem;
+  padding: 6px 14px;
   border-radius: 999px;
   color: var(--accent4);
   transition: all 0.2s ease;
@@ -189,6 +200,7 @@ section h2:first-child {
 .menu-lang {
   display: none;
   margin-top: 8px;
+  font-size: 0.95rem;
 }
 
 .menu-lang.active {
@@ -202,7 +214,7 @@ footer {
   text-align: center;
   font-size: 0.8rem;
   color: #888;
-  margin-top: 60px;
-  padding-top: 20px;
+  margin-top: 40px;
+  padding-top: 16px;
   border-top: 1px solid var(--accent1);
 }
