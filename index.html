@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Takumi Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 <header>
-  <div class="site-title">Takumi Portfolio</div>
+  <div class="logo">TAKUMI</div>
   <nav>
     <a href="#top">Top</a>
     <a href="#about">About</a>
-    <a href="#works">Works</a>
+    <a href="#output">Output</a>
     <a href="#study">Study</a>
     <a href="#hobby">Hobby</a>
     <a href="#support">Support</a>
@@ -20,80 +21,157 @@
 </header>
 
 <main id="top">
+
+  <!-- Hero -->
   <section class="hero">
-    <h1>学びと、小さな実験のポートフォリオ。</h1>
-    <p class="hero-lead">
-      資格の勉強、ちょっとしたWeb制作、ローカルなお店へのささやかな応援。
+    <div class="hero-text">
+      <p class="hero-label">PORTFOLIO</p>
+      <h1>TAKUMI</h1>
+      <p class="hero-lead">
+        日々の仕事の横で続けている学び、小さなアウトプット、
+        そして個人的に応援している場所をまとめたサイトです。
+        派手さよりも、「積み上げ」を静かに見せていきます。
+      </p>
+    </div>
+    <div class="hero-image">
+      <!-- 好きな写真があれば background-image で差し替えOK -->
+      <div class="hero-photo"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="section-header">
+      <h2>About</h2>
+      <span class="section-sub">私について</span>
+    </div>
+    <p>
+      普段は会社員として働きながら、スキマ時間で資格の勉強や、
+      シンプルなWebページづくり、小さな仕組みづくりを続けています。
+      自分や身近な人の「分かりづらい」「面倒くさい」を、
+      少しずつ軽くしていくのが好きです。
     </p>
-    <p class="hero-sub">
-      大げさな肩書きより、「何を積み上げているか」が見える場所として、この1ページを育てていきます。
+    <p>
+      このポートフォリオでは、肩書きよりも
+      「どんなことを学び」「どんな形で残しているか」を中心に載せています。
     </p>
   </section>
 
-  <section id="about" class="section-block">
-    <h2>About</h2>
+  <!-- Output / Works（できること＋作ったものの雰囲気） -->
+  <section class="section alt" id="output">
+    <div class="section-header">
+      <h2>Output</h2>
+      <span class="section-sub">つくれるもの・やっていること</span>
+    </div>
     <p>
-      日々の仕事の合間に、資格の勉強やWebまわりの小さな制作を続けています。
-      ここでは、名前や肩書きを強く打ち出しすぎず、ほどよい距離感で「こういう人」です、を置いておきます。
+      本業とは切り離した個人の範囲で、こんなアウトプットができます。
+      ガチ営業ではなく、「このくらいまでは一人で組めます」の目安として。
     </p>
-    <p>
-      好きなものは、整った情報、ちょっとした仕組み化、ローカルな居酒屋、静かな時間。
-    </p>
+
+    <div class="works-grid">
+      <article class="work-item">
+        <div class="work-thumb thumb-1"></div>
+        <div class="work-content">
+          <h3>静的サイト構築</h3>
+          <p>
+            HTML / CSS / バニラJSで完結する軽いWebページ。
+            GitHub Pagesなどを使ったポートフォリオ・LPの構成調整。
+          </p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-thumb thumb-2"></div>
+        <div class="work-content">
+          <h3>学習用コンテンツ</h3>
+          <p>
+            資格テキストの要点整理、確認用クイズページなど、
+            「勉強した内容を残す」ためのシンプルなコンテンツづくり。
+          </p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-thumb thumb-3"></div>
+        <div class="work-content">
+          <h3>情報整理・ちいさな仕組み</h3>
+          <p>
+            メモテンプレート、チェックリスト、簡単な入力フォームなど、
+            日常や仕事を少し楽にする仕組みの試作。
+          </p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-thumb thumb-4"></div>
+        <div class="work-content">
+          <h3>ローカルの紹介ページ</h3>
+          <p>
+            応援したいお店や場所の紹介ページ制作。
+            多言語対応や写真レイアウトの調整など。
+          </p>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <section id="works" class="section-alt">
-    <h2>Works</h2>
+  <!-- Study -->
+  <section class="section" id="study">
+    <div class="section-header">
+      <h2>Study</h2>
+      <span class="section-sub">勉強していること</span>
+    </div>
     <p>
-      個人として試していることや、小さく形にしたものの記録です。
-      本格的な案件紹介というより、「こういうアウトプットができます」のサンプル置き場。
+      学んだことをそのまま流してしまうのがもったいないので、
+      自分用の整理も兼ねて、要点メモやクイズとして残していきます。
     </p>
-    <ul>
-      <li>資格学習用のクイズページ（ブラウザだけで動くシンプルな仕組み）</li>
-      <li>このポートフォリオサイト（静的サイト構成の実験）</li>
-      <li>身近な人向けの、勉強サポート用コンテンツなど（順次追加予定）</li>
+    <ul class="bullet-list">
+      <li>資格系：簿記 / マネー系 / IT系 などの基礎整理</li>
+      <li>Web基礎：HTML / CSS / バニラJS の実験</li>
+      <li>身近な仕事に役立つ知識のメモ化</li>
     </ul>
-    <p class="note">※ 詳細が増えてきたら別ページに分ける予定。</p>
+    <p class="note">
+      ※ ここから各資格ごとのテキスト・小テストページへリンク予定。
+      ログインや記録は行わず、気軽に使える形を想定しています。
+    </p>
   </section>
 
-  <section id="study" class="section-block">
-    <h2>Study</h2>
+  <!-- Hobby -->
+  <section class="section alt" id="hobby">
+    <div class="section-header">
+      <h2>Hobby</h2>
+      <span class="section-sub">好きなこと</span>
+    </div>
     <p>
-      勉強している内容や、復習用のテキスト・クイズをまとめていくエリアです。
-      自分用の整理でありつつ、誰かの役にも立てばいいな、くらいの温度感で。
+      生活の温度を保ってくれているものたち。
+      深堀りしすぎない程度に、断片的に置いていきます。
     </p>
-    <ul>
-      <li>簿記：重要ポイント＋10問クイズ</li>
-      <li>FP / マネーリテラシー：用語整理</li>
-      <li>IT・情報セキュリティ：頻出キーワード確認</li>
-    </ul>
-    <p class="note">※ ここから各資格ごとのページに飛ばす構成も後で作れる。</p>
-  </section>
-
-  <section id="hobby" class="section-alt">
-    <h2>Hobby</h2>
-    <p>
-      仕事や勉強以外のところで、楽しくやっていること。
-      深堀りしすぎず、雰囲気だけ伝わるくらいのメモ。
-    </p>
-    <ul>
-      <li>植物を育てたり眺めたり。</li>
-      <li>気分で作るごはんの実験。</li>
+    <ul class="bullet-list">
+      <li>植物：育てたり眺めたり、増えたり減ったり。</li>
+      <li>料理：気分で作るごはんと、お酒に合うもの。</li>
       <li>スポーツや格闘技を見る時間。</li>
-      <li>ローカルなお店を探してふらっと飲むこと。</li>
+      <li>ローカルな居酒屋やお店をふらっと巡ること。</li>
     </ul>
   </section>
 
-  <section id="support" class="section-block">
-    <h2>Support</h2>
+  <!-- Support -->
+  <section class="section" id="support">
+    <div class="section-header">
+      <h2>Support</h2>
+      <span class="section-sub">応援している場所</span>
+    </div>
     <p>
-      個人的に応援しているお店や場所を紹介するスペース。
-      「スポンサー」「提携」みたいな大げさなニュアンスではなく、
-      ただ好きで推している雰囲気で載せています。
+      個人的に「ここ好きだな」と思っている場所を、
+      さりげなく紹介するスペースです。
+      公式なスポンサー表記ではなく、あくまで私的な推しとして。
     </p>
 
-    <div data-tab-wrapper>
+    <div class="support-block" data-tab-wrapper>
       <h3>居酒屋 Kafu Terrace</h3>
-      <p>地元食材と、落ち着いた空気が心地いい小さな居酒屋。</p>
+      <p class="support-desc">
+        地元食材と静かな空気が心地よい、小さな居酒屋。
+        仕事帰りにふっと力が抜けるような場所。
+      </p>
 
       <div class="tabs">
         <button class="tab-btn active" data-lang="ja">日本語</button>
@@ -102,17 +180,15 @@
       </div>
 
       <div class="menu-lang active" data-lang="ja">
-        <p>おすすめ：</p>
-        <ul>
+        <ul class="bullet-list">
           <li>島豆腐と海ぶどうのサラダ</li>
           <li>ラフテーとソーキ盛り合わせ</li>
-          <li>グルクン唐揚げ</li>
+          <li>グルクンの唐揚げ</li>
         </ul>
       </div>
 
       <div class="menu-lang" data-lang="en">
-        <p>Recommended:</p>
-        <ul>
+        <ul class="bullet-list">
           <li>Sea Grapes & Island Tofu Salad</li>
           <li>Okinawan Braised Pork Sampler</li>
           <li>Deep-fried Gurukun Fish</li>
@@ -120,28 +196,33 @@
       </div>
 
       <div class="menu-lang" data-lang="zh">
-        <p>推荐菜：</p>
-        <ul>
+        <ul class="bullet-list">
           <li>海葡萄岛豆腐沙拉</li>
           <li>冲绳红烧肉拼盘</li>
           <li>炸Gurukun鱼</li>
         </ul>
       </div>
 
-      <p class="note">※ 表現やメニューはイメージ。実際のお店に合わせて調整可。</p>
+      <p class="note">※ 表現や内容はダミー。実在のお店に合わせて自由に変えてOK。</p>
     </div>
   </section>
 
-  <section id="contact" class="section-alt">
-    <h2>Contact</h2>
+  <!-- Contact -->
+  <section class="section alt" id="contact">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <span class="section-sub">ゆるい連絡先</span>
+    </div>
     <p>
-      「何か一緒にやれそう」「こういうコンテンツ欲しい」などあれば、気軽にどうぞ。
-      まだテスト段階なので、連絡先もあとで正式なものに変えます。
+      「こういうコンテンツがあったら嬉しい」「面白そうなので声かけたい」などあれば、
+      無理のない範囲でどうぞ。
+      現時点ではテスト用の連絡先になっています。
     </p>
-    <ul>
+    <ul class="bullet-list">
       <li>Mail: <a href="mailto:example@example.com">example@example.com</a></li>
     </ul>
   </section>
+
 </main>
 
 <footer>

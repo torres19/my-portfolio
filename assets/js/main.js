@@ -1,21 +1,26 @@
-// ページ内リンクをスムーススクロールに
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (!href || href === '#') return;
-    const target = document.querySelector(href);
-    if (!target) return;
+// スムーススクロール（内部リンク用）
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
 
-    e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.pageYOffset - 60;
-    window.scrollTo({
-      top,
-      behavior: 'smooth'
-    });
+  const href = link.getAttribute('href');
+  if (!href || href === '#') return;
+
+  const target = document.querySelector(href);
+  if (!target) return;
+
+  e.preventDefault();
+
+  const offset = 70; // ヘッダー分
+  const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+  window.scrollTo({
+    top,
+    behavior: 'smooth'
   });
 });
 
-// Supportページなどの言語タブ
+// Supportの多言語タブ
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.tab-btn');
   if (!btn) return;
